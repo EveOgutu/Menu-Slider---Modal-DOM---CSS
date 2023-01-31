@@ -13,6 +13,12 @@
 body {
     font-family: 'Lato' sans-serif;
     margin: 0;
+    transition: transform 0.3s ease;
+}
+
+body.show-nav {
+    /*Width of the nav*/
+    transform: translate(200px);
 }
 
 nav {
@@ -47,7 +53,7 @@ nav ul {
 
 nav ul li {
     border-bottom: 2px solid rgba(200, 200, 200, 0.1);
-    padding 20px;
+    padding: 20px;
 }
 
 nav ul li:first-of-type {
@@ -92,11 +98,11 @@ button:focus {
     outline: none;
 }
 
-.toogle {
+.toggle {
     background-color: rgba(0, 0, 0, 0.3);
     position: absolute;
-    top: 200px;
-    left: 200px;
+    top: 20px;
+    left: 20px;
 }
 
 .cta-btn {
@@ -109,4 +115,64 @@ button:focus {
     margin: 0 auto;
     max-width: 100%;
     width: 800px;
+}
+
+.modal-container {
+background-color: rgba(0, 0, 0, 0.6);
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+}
+
+.modal {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    width: 400px;
+}
+
+.modal-header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    border-bottom: 1px solid #333;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.modal-form div {
+    margin: 15px 0;
+}
+
+.modal-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-form .form-input {
+    padding: 8px;
+    width: 100%;
+}
+
+.close-btn {
+    background: transparent;
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
