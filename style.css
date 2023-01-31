@@ -127,6 +127,11 @@ right: 0;
 bottom: 0;
 }
 
+.modal-container.show-modal {
+    display: block;
+
+}
+
 .modal {
     background-color: #fff;
     border-radius: 5px;
@@ -138,6 +143,8 @@ bottom: 0;
     transform: translate(-50%, -50%);
     max-width: 100%;
     width: 400px;
+    animation-name: modal-open;
+    animation-duration: var(--modal-duration);
 }
 
 .modal-header {
@@ -175,4 +182,13 @@ bottom: 0;
     position: absolute;
     top: 0;
     right: 0;
+}
+
+@keyframes modal-open {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
